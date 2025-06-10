@@ -17,6 +17,19 @@ test:
 clean:
 	rm -rf __pycache__ data/*.json
 .PHONY: run init lint test clean
+
+# Commit and push all changes
+push:
+	@git add .
+	@git status
+	@git commit -m "Update"
+	@git push
+
+# Pull the latest changes
+pull:
+	@git pull
+
+
 # This Makefile provides commands to run the FastAPI application, initialize the project structure,
 # lint the code, run tests, and clean up temporary files.
 # The 'run' command starts the FastAPI server with hot reloading.
