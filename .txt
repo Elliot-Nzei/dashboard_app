@@ -13,14 +13,17 @@ project_root/
 │   ├── index.html               # Main dashboard page
 │   ├── job_tracker.html         # Job application tracker
 │   ├── todo.html                # To-do list interface
+│   ├── settings.html
 │   ├── expenses.html            # Expense tracker
 │   ├── assets/
 │   │   ├── css/
 │   │   │   └── styles.css       # Global styles, layout, responsiveness
+│   │   │   └── setting.css
 │   │   ├── js/
 │   │   │   ├── main.js          # JS for dashboard interactivity
 │   │   │   ├── job_tracker.js   # JS for job page logic
 │   │   │   ├── todo.js          # JS for to-do list logic
+│   │   │   ├── setting.js
 │   │   │   ├── expenses.js      # JS for expense tracker logic
 │   │   ├── img/
 │   │   │   └── placeholder.png  # Default profile image
@@ -29,10 +32,6 @@ project_root/
 │   ├── todo.json                # To-do list items per user
 │   ├── jobs.json                # Job application entries
 │   ├── expenses.json            # Parsed and categorized user expenses
-├── static/                      # For FastAPI static serving
-│   └── (symlink or copy from frontend/assets)
-├── templates/                   # Jinja2 template HTMLs if needed
-│   └── (copy from frontend/*.html if needed)
 ├── Makefile
 ├── README.md
 ├── requirements.txt            # Python dependencies (FastAPI, uvicorn, etc.)

@@ -1,6 +1,6 @@
 # routers/jobs.py
 from fastapi import APIRouter
-from models import JobApplication
+from backend.models import JobApplication
 from database import load_json, save_json
 
 router = APIRouter(prefix="/jobs", tags=["Jobs"])
