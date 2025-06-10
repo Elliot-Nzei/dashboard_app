@@ -1,11 +1,22 @@
-version: "3.9"
-
 services:
-  dashboard:
-    build: .
-    container_name: dashboard_app
+  backend:
+    build:
+      context: ./backend     # Point to backend directory
+      dockerfile: Dockerfile  # Look for Dockerfile in that directory
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
     ports:
       - "8000:8000"
-    volumes:
-      - ./data:/app/data  # Persist JSON data
-    restart: always
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend    # Point to frontend directory
+      dockerfile: Dockerfile # Look for Dockerfile in that directory
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    restart: unless-stopped
