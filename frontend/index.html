@@ -1,0 +1,132 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="todo.html">To-Do List</a>
+    <a href="job_tracker.html">Job Tracker</a>
+    <a href="expenses.html">Expenses</a>
+  <div class="settings-link">
+    <a href="settings.html">Settings</a>
+  </div>
+  </div>
+    <div class="container">
+    <aside class="sidebar">
+    <img src="assets/img/placeholder.png" alt="Profile Picture" class="profile-pic" id="sidebar-profile-pic">
+    <div class="username-container">
+      <button class="username-btn" id="username-display">Username</button>
+    </div>
+        <ul class="todo-summary" id="sidebar-todo-list">
+          <!-- Populated dynamically -->
+        </ul>
+        <div class="monthly-expense" id="monthly-expense-summary">
+          <div id="budget-lines-label" style="text-align:center; margin-bottom:6px;">
+            <span style="color:#27ae60;">Budget: ₦<span id="budget-total">0</span></span>
+            <span style="margin-left:16px; color:#c0392b;">Spent: ₦<span id="budget-spent">0</span></span>
+          </div>
+          <div class="budget-lines-bar-bg">
+            <div class="budget-line budget-line-green" id="budget-line-green"></div>
+            <div class="budget-line budget-line-red" id="budget-line-red"></div>
+          </div>
+        </div>
+    </aside>
+    <main class="main-content">
+      <section class="dashboard-header">
+        <h1>Welcome back</h1>
+        <p class="subtext">Here's an overview of your activity and quick access to key tools.</p>
+        <p class="subtext" style="margin-top:0.5rem;">
+          <strong>Tip:</strong> Please note that this dashboard is still under development. Some features may not be fully functional yet.
+        </p>
+      </section>
+    
+      <section class="dashboard-cards">
+        <div class="card analytics">
+          <h2>Job Applications</h2>
+          <p><span class="highlight" id="weekly-job-count">0</span> submitted this week</p>
+          <a href="job_tracker.html">View Tracker</a>
+        </div>
+        <div class="card finances">
+          <h2>Savings Streak</h2>
+          <p>
+            <span class="highlight" id="current-savings-streak">0</span> day streak!
+            <br>
+            <small>Best: <span id="best-savings-streak">0</span> days</small>
+          </p>
+          <a href="expenses.html">See Expense Details</a>
+        </div>
+        <div class="card reminders">
+          <h2>Follow-Up Tasks</h2>
+          <p><span class="highlight" id="pending-followups-count">0</span> pending email follow-ups</p>
+          <a href="#">View Tasks</a>
+        </div>
+      </section>
+    
+      <section class="dashboard-mood-productivity">
+        <h2>Mood & Productivity Tracker</h2>
+        <div class="mood-productivity-card">
+          <canvas id="activityChart"></canvas>
+          <form id="mood-productivity-form" class="mood-form">
+            <label>
+              Mood:
+              <select id="mood-select">
+                <option value="1">😞</option>
+                <option value="2">😐</option>
+                <option value="3">🙂</option>
+                <option value="4">😃</option>
+                <option value="5">🤩</option>
+              </select>
+            </label>
+            <label>
+              Productivity:
+              <select id="productivity-select">
+                <option value="1">Very Low</option>
+                <option value="2">Low</option>
+                <option value="3">Average</option>
+                <option value="4">High</option>
+                <option value="5">Excellent</option>
+              </select>
+            </label>
+            <button type="submit">Log Today</button>
+          </form>
+        </div>
+      </section>
+    
+      <section class="dashboard-quick-actions">
+        <h2>Quick Actions</h2>
+        <div class="quick-actions-grid">
+          <button onclick="location.href='job_tracker.html'">+ Add Job</button>
+          <button onclick="location.href='expenses.html'">+ Add Expense</button>
+          <button id="add-reminder-btn" type="button">+ Add Reminder</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="reminder-modal" class="modals" style="display:none;">
+    <div class="modals-content">
+      <span class="closes" id="close-reminder-modal">&times;</span>
+      <h3>Add Smart Reminder</h3>
+      <form id="reminder-form">
+        <input type="text" id="reminder-title" placeholder="Reminder Title" required>
+        <input type="datetime-local" id="reminder-datetime" required>
+        <select id="reminder-type">
+          <option value="email">Email</option>
+          <option value="call">Call</option>
+          <option value="meeting">Meeting</option>
+          <option value="other">Other</option>
+        </select>
+        <button type="submit">Save Reminder</button>
+      </form>
+    </div>
+  </div>
+  <ul id="reminders-list"></ul>
+  <script src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/sidebar.js"></script>
+</body>
+</html>

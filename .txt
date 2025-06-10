@@ -1,0 +1,40 @@
+project_root/
+├── backend/
+│   ├── main.py                  # FastAPI main app
+│   ├── models.py                # Pydantic models
+│   ├── database.py              # Handles data read/write (JSON or optional SQLite)
+│   ├── utils.py                 # Utility functions for expense parsing, etc.
+│   ├── routers/
+│   │   ├── auth.py              # Future-proofing: auth APIs
+│   │   ├── todo.py              # To-do list APIs
+│   │   ├── jobs.py              # Job tracker APIs
+│   │   ├── expenses.py          # Expense tracker APIs
+├── frontend/
+│   ├── index.html               # Main dashboard page
+│   ├── job_tracker.html         # Job application tracker
+│   ├── todo.html                # To-do list interface
+│   ├── expenses.html            # Expense tracker
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── styles.css       # Global styles, layout, responsiveness
+│   │   ├── js/
+│   │   │   ├── main.js          # JS for dashboard interactivity
+│   │   │   ├── job_tracker.js   # JS for job page logic
+│   │   │   ├── todo.js          # JS for to-do list logic
+│   │   │   ├── expenses.js      # JS for expense tracker logic
+│   │   ├── img/
+│   │   │   └── placeholder.png  # Default profile image
+├── data/
+│   ├── users.json               # Stores user data and profile info
+│   ├── todo.json                # To-do list items per user
+│   ├── jobs.json                # Job application entries
+│   ├── expenses.json            # Parsed and categorized user expenses
+├── static/                      # For FastAPI static serving
+│   └── (symlink or copy from frontend/assets)
+├── templates/                   # Jinja2 template HTMLs if needed
+│   └── (copy from frontend/*.html if needed)
+├── Makefile
+├── README.md
+├── requirements.txt            # Python dependencies (FastAPI, uvicorn, etc.)
+
+

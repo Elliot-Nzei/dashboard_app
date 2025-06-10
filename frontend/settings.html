@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Settings</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/setting.css" />
+</head>
+<body>
+  <header>
+    <button onclick="window.location.href='index.html'" class="back-button">← Back to Dashboard</button>
+  </header>
+
+  <main class="settings-container">
+    <h1>User Settings</h1>
+
+    <section class="profile-section">
+      <label>Profile Picture</label>
+      <img id="profile-preview" src="assets/img/placeholder.png" alt="Profile" />
+      <input type="file" id="profile-upload" accept="image/*" />
+    </section>
+
+    <section class="username-section">
+      <label for="username-input">Display Name</label>
+      <input type="text" id="username-input" maxlength="30" />
+    </section>
+
+    <section class="theme-section">
+      <label for="theme-select">Theme</label>
+      <select id="theme-select">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </section>
+
+    <button id="save-settings" onclick="saveSettingsAndRedirect()">Save Changes</button>
+    <script>
+      function saveSettingsAndRedirect() {
+        // Call your existing save logic if any
+        if (typeof saveSettings === 'function') {
+          saveSettings();
+        }
+        // Redirect to dashboard
+        window.location.href = 'index.html';
+      }
+    </script>
+  </main>
+
+  <script src="assets/js/setting.js"></script>
+</body>
+</html>

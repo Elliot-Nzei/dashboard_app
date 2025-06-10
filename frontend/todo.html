@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="todo.html">To-Do List</a>
+    <a href="job_tracker.html">Job Tracker</a>
+    <a href="expenses.html">Expenses</a>
+  <div class="settings-link">
+    <a href="settings.html">Settings</a>
+  </div>
+  </div>
+    <div class="container">
+    <aside class="sidebar">
+    <img src="assets/img/placeholder.png" alt="Profile Picture" class="profile-pic" id="sidebar-profile-pic">
+    <div class="username-container">
+      <button class="username-btn" id="username-display">Username</button>
+    </div>
+        <ul class="todo-summary" id="sidebar-todo-list">
+          <!-- Populated dynamically -->
+        </ul>
+        <div class="monthly-expense" id="monthly-expense-summary">
+          <div id="budget-lines-label" style="text-align:center; margin-bottom:6px;">
+            <span style="color:#27ae60;">Budget: ₦<span id="budget-total">0</span></span>
+            <span style="margin-left:16px; color:#c0392b;">Spent: ₦<span id="budget-spent">0</span></span>
+          </div>
+          <div class="budget-lines-bar-bg">
+            <div class="budget-line budget-line-green" id="budget-line-green"></div>
+            <div class="budget-line budget-line-red" id="budget-line-red"></div>
+          </div>
+        </div>
+    </aside>
+        <main class="main-content">
+          <section class="todo-header">
+            <form id="todo-form">
+              <input type="text" id="todo-input" placeholder="Enter task" required>
+              <button type="submit">Add Task</button>
+            </form>
+            <ul id="todo-list"></ul>
+          </section>
+        </main>
+  </div>
+  <script src="assets/js/todo.js"></script>
+  <script type="module" src="assets/js/sidebar.js"></script>
+</body>
+</html>

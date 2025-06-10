@@ -1,0 +1,133 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="todo.html">To-Do List</a>
+    <a href="job_tracker.html">Job Tracker</a>
+    <a href="expenses.html">Expenses</a>
+  <div class="settings-link">
+    <a href="settings.html">Settings</a>
+  </div>
+  </div>
+    <div class="container">
+    <aside class="sidebar">
+    <img src="assets/img/placeholder.png" alt="Profile Picture" class="profile-pic" id="sidebar-profile-pic">
+    <div class="username-container">
+      <button class="username-btn" id="username-display">Username</button>
+    </div>
+        <ul class="todo-summary" id="sidebar-todo-list">
+          <!-- Populated dynamically -->
+        </ul>
+        <div class="monthly-expense" id="monthly-expense-summary">
+          <div id="budget-lines-label" style="text-align:center; margin-bottom:6px;">
+            <span style="color:#27ae60;">Budget: ₦<span id="budget-total">0</span></span>
+            <span style="margin-left:16px; color:#c0392b;">Spent: ₦<span id="budget-spent">0</span></span>
+          </div>
+          <div class="budget-lines-bar-bg">
+            <div class="budget-line budget-line-green" id="budget-line-green"></div>
+            <div class="budget-line budget-line-red" id="budget-line-red"></div>
+          </div>
+        </div>
+    </aside>
+    <main class="main-content expenses-page">
+  <section class="dashboard-header expenses-header" style="margin-bottom:2.2rem;">
+    <h1>Expense Tracker</h1>
+    <p class="subtext">Upload your bank statement, analyze your spending, and take control of your finances.</p>
+    <p class="subtext" style="margin-top:0.5rem;">
+      <strong>Tip:</strong> Dont forget to put in your Monthly Budget to track your spending effectively before uploading your bank statement.
+    </p>
+  </section>
+
+  <!-- Finance Overview -->
+  <section class="dashboard-cards expenses-overview" style="margin-bottom:2.5rem;">
+    <div class="card finances">
+      <h2>This Month's Spending</h2>
+      <p>
+        <span class="highlight" id="monthly-expense-amount">₦0</span> spent so far
+      </p>
+      <div style="margin:1.2rem 0;">
+        <div style="background:#eaf3fa;border-radius:8px;height:18px;overflow:hidden;">
+          <div id="budget-progress-bar" style="height:18px;width:0;background:linear-gradient(90deg,#27ae60 60%,#6dd5fa 100%);transition:width 0.4s;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.98rem;margin-top:0.3rem;">
+          <span>Budget: ₦<span id="budget-total">0</span></span>
+          <span>Spent: ₦<span id="budget-spent">0</span></span>
+        </div>
+      </div>
+      <form id="budgetForm" style="margin-top:1rem;display:flex;gap:0.7rem;align-items:center;">
+        <label for="monthlyBudget" style="font-size:0.98rem;">Set Budget:</label>
+        <input type="number" id="monthlyBudget" min="0" step="0.01" style="width:110px;padding:0.4rem 0.7rem;border-radius:7px;border:1.5px solid #27ae60;">
+        <button type="submit" style="background:#27ae60;color:#fff;border:none;border-radius:7px;padding:0.5rem 1.2rem;font-weight:600;cursor:pointer;">Save</button>
+      </form>
+      <p id="budgetStatus" style="margin-top:0.7rem;font-weight:600;"></p>
+    </div>
+    <div class="card analytics">
+      <h2>Top Categories</h2>
+      <canvas id="topCategoriesChart" width="320" height="180"></canvas>
+    </div>
+    <div class="card reminders">
+      <h2>Recurring Expenses</h2>
+      <ul id="recurringList" style="margin-top:1.1rem;"></ul>
+    </div>
+  </section>
+
+  <!-- Upload and Insights -->
+  <section class="expenses-main expenses-upload" style="margin-bottom:2.5rem;">
+    <form id="uploadForm">
+      <label for="csvFile">Upload Bank Statement (CSV):</label>
+      <input type="file" id="csvFile" name="csvFile" accept=".csv" required />
+      <button type="submit">Upload & Analyze</button>
+    </form>
+
+    <section id="summarySection" style="display:none;">
+      <h2>Summary</h2>
+      <p><strong>Highest Expense:</strong> <span id="maxExpense"></span></p>
+      <canvas id="expenseChart" width="600" height="300"></canvas>
+      <h3>Transactions</h3>
+      <table id="transactionTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </section>
+
+  <!-- More Insights -->
+  <section class="finance-widgets expenses-widgets" style="margin-bottom:2.5rem;">
+    <div class="widget" id="savedAmountWidget">
+      <h3>Saved Amount Per Month</h3>
+      <canvas id="savedAmountChart" width="400" height="200"></canvas>
+    </div>
+    <div class="widget" id="monthlyTrendsWidget">
+      <h3>Monthly Trends</h3>
+      <canvas id="monthlyTrendsChart" width="400" height="200"></canvas>
+    </div>
+    <div class="widget" id="topMerchantsWidget">
+      <h3>Top 5 Merchants</h3>
+      <ul id="topMerchantsList"></ul>
+    </div>
+  </section>
+</main>
+  </div>in>
+  <!-- Add this before your own JS scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/expenses.js"></script>rt.js"></script>
+  <script type="module" src="assets/js/sidebar.js"></script>
+</body>pt type="module" src="assets/js/sidebar.js"></script>
+</html>
+<!-- This is the expenses.html file for the Expense Tracker feature -->
+<!-- This is the expenses.html file for the Expense Tracker feature -->
