@@ -1,1 +1,302 @@
-[]
+[
+  {
+    "date": "2025-03-16",
+    "description": "Clinic Visit",
+    "amount": 159.36,
+    "category": "health"
+  },
+  {
+    "date": "2025-05-05",
+    "description": "Pizza Hut",
+    "amount": 56.1,
+    "category": "food"
+  },
+  {
+    "date": "2025-03-12",
+    "description": "Netflix",
+    "amount": 47.15,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-03-29",
+    "description": "Electric Bill",
+    "amount": 135.0,
+    "category": "other"
+  },
+  {
+    "date": "2025-05-24",
+    "description": "Electronics Store",
+    "amount": 136.34,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-05-10",
+    "description": "Monthly Rent",
+    "amount": 420.94,
+    "category": "housing"
+  },
+  {
+    "date": "2025-05-05",
+    "description": "Electric Bill",
+    "amount": 12.55,
+    "category": "other"
+  },
+  {
+    "date": "2025-05-14",
+    "description": "Monthly Rent",
+    "amount": 766.99,
+    "category": "housing"
+  },
+  {
+    "date": "2025-06-02",
+    "description": "Electronics Store",
+    "amount": 162.07,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-05-29",
+    "description": "Transfer Fee",
+    "amount": 64.84,
+    "category": "misc"
+  },
+  {
+    "date": "2025-05-01",
+    "description": "Misc Expense",
+    "amount": 218.94,
+    "category": "other"
+  },
+  {
+    "date": "2025-04-02",
+    "description": "Water Bill",
+    "amount": 291.31,
+    "category": "utilities"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Internet Service",
+    "amount": 268.71,
+    "category": "utilities"
+  },
+  {
+    "date": "2025-06-04",
+    "description": "Pizza Hut",
+    "amount": 129.7,
+    "category": "food"
+  },
+  {
+    "date": "2025-04-10",
+    "description": "Clothing Store",
+    "amount": 274.38,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-05-08",
+    "description": "Clothing Store",
+    "amount": 119.49,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-03-22",
+    "description": "Cinema Ticket",
+    "amount": 198.36,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-03-19",
+    "description": "Spotify",
+    "amount": 123.04,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-04-18",
+    "description": "Clothing Store",
+    "amount": 215.7,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-03-21",
+    "description": "Transfer Fee",
+    "amount": 21.64,
+    "category": "misc"
+  },
+  {
+    "date": "2025-05-19",
+    "description": "Metro Card",
+    "amount": 113.24,
+    "category": "other"
+  },
+  {
+    "date": "2025-05-19",
+    "description": "McDonald's",
+    "amount": 292.48,
+    "category": "food"
+  },
+  {
+    "date": "2025-05-08",
+    "description": "Transfer Fee",
+    "amount": 128.16,
+    "category": "misc"
+  },
+  {
+    "date": "2025-05-03",
+    "description": "Water Bill",
+    "amount": 69.82,
+    "category": "utilities"
+  },
+  {
+    "date": "2025-03-18",
+    "description": "Pharmacy",
+    "amount": 71.41,
+    "category": "health"
+  },
+  {
+    "date": "2025-05-21",
+    "description": "Transfer Fee",
+    "amount": 55.32,
+    "category": "misc"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Local Market",
+    "amount": 259.12,
+    "category": "other"
+  },
+  {
+    "date": "2025-06-04",
+    "description": "Spotify",
+    "amount": 117.25,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-05-10",
+    "description": "Cinema Ticket",
+    "amount": 188.7,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-05-28",
+    "description": "Spotify",
+    "amount": 54.44,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-04-14",
+    "description": "Internet Service",
+    "amount": 14.88,
+    "category": "utilities"
+  },
+  {
+    "date": "2025-06-06",
+    "description": "Transfer Fee",
+    "amount": 244.22,
+    "category": "misc"
+  },
+  {
+    "date": "2025-05-24",
+    "description": "Netflix",
+    "amount": 194.65,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-06-06",
+    "description": "Supermart",
+    "amount": 116.14,
+    "category": "other"
+  },
+  {
+    "date": "2025-05-01",
+    "description": "Clothing Store",
+    "amount": 289.86,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-03-11",
+    "description": "Metro Card",
+    "amount": 117.39,
+    "category": "other"
+  },
+  {
+    "date": "2025-04-23",
+    "description": "Clothing Store",
+    "amount": 274.25,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-04-13",
+    "description": "Clothing Store",
+    "amount": 177.23,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-04-18",
+    "description": "Monthly Rent",
+    "amount": 716.63,
+    "category": "housing"
+  },
+  {
+    "date": "2025-03-18",
+    "description": "Monthly Rent",
+    "amount": 428.09,
+    "category": "housing"
+  },
+  {
+    "date": "2025-04-15",
+    "description": "Clinic Visit",
+    "amount": 224.54,
+    "category": "health"
+  },
+  {
+    "date": "2025-05-15",
+    "description": "Monthly Rent",
+    "amount": 423.44,
+    "category": "housing"
+  },
+  {
+    "date": "2025-04-17",
+    "description": "Internet Service",
+    "amount": 278.34,
+    "category": "utilities"
+  },
+  {
+    "date": "2025-05-12",
+    "description": "Misc Expense",
+    "amount": 37.86,
+    "category": "other"
+  },
+  {
+    "date": "2025-04-08",
+    "description": "Misc Expense",
+    "amount": 233.2,
+    "category": "other"
+  },
+  {
+    "date": "2025-04-02",
+    "description": "Cinema Ticket",
+    "amount": 202.95,
+    "category": "entertainment"
+  },
+  {
+    "date": "2025-04-23",
+    "description": "Clinic Visit",
+    "amount": 80.86,
+    "category": "health"
+  },
+  {
+    "date": "2025-06-06",
+    "description": "Clothing Store",
+    "amount": 158.93,
+    "category": "shopping"
+  },
+  {
+    "date": "2025-04-21",
+    "description": "Metro Card",
+    "amount": 159.6,
+    "category": "other"
+  },
+  {
+    "date": "2025-05-17",
+    "description": "Monthly Rent",
+    "amount": 705.24,
+    "category": "housing"
+  }
+]
